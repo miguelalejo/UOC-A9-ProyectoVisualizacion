@@ -27,7 +27,7 @@ var	valueline = d3.svg.line()
 
 
 // Get the data
-d3.json("data.json", function(error, data) {
+d3.json("https://raw.githubusercontent.com/miguelalejo/UOC-A9-ProyectoVisualizacion/main/data/line-nro-contratos.json", function(error, data) {
 	data.forEach(function(d) {
 		d.date = parseDate(d.date);
 		d.close = +d.close;
