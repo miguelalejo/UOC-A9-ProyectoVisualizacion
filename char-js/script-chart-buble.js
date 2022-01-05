@@ -23,11 +23,18 @@
             }
             myData = []
             data.forEach((value) => {
-              obj['x'] = value.tipo;
-              obj['y'] = value.Producto;
+              let obj = {};
               obj['r'] = value.amount;
+              obj['y'] = value.Producto;
+              obj['x'] = value.tipo;            
               myData.push(obj);        
             });
+            var bubbleBackgroundColor = function() {
+              return 'rgba(255, 206, 86, 0.6)'
+            };
+            var bubbleBorderColor = function() {
+                      return 'rgba(255, 206, 86, 1)'
+            };
             var bubbleChartData = {
               animation: {
                 duration: 10
@@ -40,21 +47,9 @@
                 lineTension: 0.1,
                 backgroundColor: bubbleBackgroundColor(),
                 borderColor: bubbleBorderColor(),
-                borderCapStyle: 'butt',
-                borderDash: [],
-                borderDashOffset: 0.0,
-                borderJoinStyle: 'miter',
-                pointBorderColor: "rgba(75,192,192,1)",
-                pointBackgroundColor: "#fff",
-                pointBorderWidth: 1,
-                pointHoverRadius: 5,
-                pointHoverBackgroundColor: "rgba(153, 102, 155, 0.2)",
-                pointHoverBorderColor: "rgba(153, 102, 155, 1)",
-                pointHoverBorderWidth: 2,
-                pointRadius: 1,
-                pointHitRadius: 10,
+               
                 // how would the data change ...how can the numbers for y be replaced with strings
-                data:myData
+                data: [{x: "EMPRESA PÚBLICA",y: "MASCARILLA KN95",r: 6.54}]
               }]
             };
   
