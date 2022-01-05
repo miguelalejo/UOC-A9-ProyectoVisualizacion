@@ -30,7 +30,7 @@
               myData.push(obj);        
             });
             var bubbleBackgroundColor = function() {
-              return 'rgba(255, 206, 86, 0.6)'
+              return 'rgba(255, 206, 86, 0.2)'
             };
             var bubbleBorderColor = function() {
                       return 'rgba(255, 206, 86, 1)'
@@ -47,9 +47,9 @@
                 lineTension: 0.1,
                 backgroundColor: bubbleBackgroundColor(),
                 borderColor: bubbleBorderColor(),
-               
+           
                 // how would the data change ...how can the numbers for y be replaced with strings
-                data: [{x: "EMPRESA PÚBLICA",y: "MASCARILLA KN95",r: 6.54}]
+                data: myData
               }]
             };
   
