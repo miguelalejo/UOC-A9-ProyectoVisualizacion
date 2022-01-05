@@ -1,17 +1,1 @@
-{"tipo":"EMPRESA P\u00daBLICA","Producto":"MASCARILLA KN95","amount":24543.6}
-{"tipo":"EMPRESA P\u00daBLICA","Producto":"PRUEBAS PCR","amount":85744.0}
-{"tipo":"EMPRESA P\u00daBLICA","Producto":"PRUEBAS RAPIDAS","amount":3700.0}
-{"tipo":"EMPRESA P\u00daBLICA","Producto":"SERVICIO LABORATORIO","amount":392846.5}
-{"tipo":"GOBIERNO DESCENTRALIZADO","Producto":"MASCARILLA KN95","amount":67927.53}
-{"tipo":"GOBIERNO DESCENTRALIZADO","Producto":"PRUEBAS RAPIDAS","amount":27490.0}
-{"tipo":"GOBIERNO DESCENTRALIZADO","Producto":"REACTIVOS COVID","amount":91542.6}
-{"tipo":"GOBIERNO DESCENTRALIZADO","Producto":"SERVICIO LABORATORIO","amount":31516.26}
-{"tipo":"HOSPITAL","Producto":"BOLSAS CADAVER","amount":16404.5}
-{"tipo":"HOSPITAL","Producto":"MASCARILLA KN95","amount":110499.0}
-{"tipo":"HOSPITAL","Producto":"PRUEBAS PCR","amount":172000.0}
-{"tipo":"HOSPITAL","Producto":"REACTIVOS COVID","amount":144607.28}
-{"tipo":"OTROS","Producto":"BOLSAS CADAVER","amount":106088.4}
-{"tipo":"OTROS","Producto":"MASCARILLA KN95","amount":3673.44}
-{"tipo":"OTROS","Producto":"PRUEBAS RAPIDAS","amount":21497.0}
-{"tipo":"OTROS","Producto":"REACTIVOS COVID","amount":102000.0}
-{"tipo":"OTROS","Producto":"SERVICIO LABORATORIO","amount":131610.0}
+[{"tipo":"EMPRESA P\u00daBLICA","Producto":"MASCARILLA KN95","amount":24543.6},{"tipo":"EMPRESA P\u00daBLICA","Producto":"PRUEBAS PCR","amount":85744.0},{"tipo":"EMPRESA P\u00daBLICA","Producto":"PRUEBAS RAPIDAS","amount":3700.0},{"tipo":"EMPRESA P\u00daBLICA","Producto":"SERVICIO LABORATORIO","amount":392846.5},{"tipo":"GOBIERNO DESCENTRALIZADO","Producto":"MASCARILLA KN95","amount":67927.53},{"tipo":"GOBIERNO DESCENTRALIZADO","Producto":"PRUEBAS RAPIDAS","amount":27490.0},{"tipo":"GOBIERNO DESCENTRALIZADO","Producto":"REACTIVOS COVID","amount":91542.6},{"tipo":"GOBIERNO DESCENTRALIZADO","Producto":"SERVICIO LABORATORIO","amount":31516.26},{"tipo":"HOSPITAL","Producto":"BOLSAS CADAVER","amount":16404.5},{"tipo":"HOSPITAL","Producto":"MASCARILLA KN95","amount":110499.0},{"tipo":"HOSPITAL","Producto":"PRUEBAS PCR","amount":172000.0},{"tipo":"HOSPITAL","Producto":"REACTIVOS COVID","amount":144607.28},{"tipo":"OTROS","Producto":"BOLSAS CADAVER","amount":106088.4},{"tipo":"OTROS","Producto":"MASCARILLA KN95","amount":3673.44},{"tipo":"OTROS","Producto":"PRUEBAS RAPIDAS","amount":21497.0},{"tipo":"OTROS","Producto":"REACTIVOS COVID","amount":102000.0},{"tipo":"OTROS","Producto":"SERVICIO LABORATORIO","amount":131610.0}]
