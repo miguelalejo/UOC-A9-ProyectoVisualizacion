@@ -2,11 +2,11 @@ function crearBarras(){
  
 // Set the dimensions of the canvas / graph
 var	margin = {top: 30, right: 20, bottom: 30, left: 50},
-	width = 600 - margin.left - margin.right,
-	height = 270 - margin.top - margin.bottom;
+	width = 600
+	height = 270 ;
 
 // Parse the date / time
-var	parseDate = d3.time.format("%d-%b-%y").parse;
+var	parseDate = d3.time.format("%d-%m-%Y").parse;
 
 // Set the ranges
 var	x = d3.time.scale().range([0, width]);
@@ -29,7 +29,7 @@ var	valueline = d3.svg.line()
 // Get the data
 d3.json("https://raw.githubusercontent.com/miguelalejo/UOC-A9-ProyectoVisualizacion/main/data/line-nro-contratos.json", function(error, data) {
 	data.forEach(function(d) {
-		d.date = d.date;
+		d.date = parseDate(d.date);
 		d.close = +d.close;
 	});
     // Adds the svg canvas
