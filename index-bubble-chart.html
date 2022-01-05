@@ -60,70 +60,8 @@
 <div id="label"></div>
 <canvas id="bubble"></canvas>
 
-<script>
-  
-  var bubbleBackgroundColor = function() {
-            return 'rgba(255, 206, 86, 0.2)'
-  };
-  var bubbleBorderColor = function() {
-            return 'rgba(255, 206, 86, 1)'
-  };
-
-  var bubbleChartData = {
-    animation: {
-      duration: 10
-    },
-    // Documentation says the tick values tick.min & tick.max must be in the Labels array. So thats what I have below
-    
-    datasets: [{
-      label: "Requests and bookings",
-      fill: false,
-      lineTension: 0.1,
-      backgroundColor: bubbleBackgroundColor(),
-      borderColor: bubbleBorderColor(),
-      borderCapStyle: 'butt',
-      borderDash: [],
-      borderDashOffset: 0.0,
-      borderJoinStyle: 'miter',
-      pointBorderColor: "rgba(75,192,192,1)",
-      pointBackgroundColor: "#fff",
-      pointBorderWidth: 1,
-      pointHoverRadius: 5,
-      pointHoverBackgroundColor: "rgba(153, 102, 155, 0.2)",
-      pointHoverBorderColor: "rgba(153, 102, 155, 1)",
-      pointHoverBorderWidth: 2,
-      pointRadius: 1,
-      pointHitRadius: 10,
-      // how would the data change ...how can the numbers for y be replaced with strings
-      data:[{x: "Mon",y: "Tue",r: 15},{x: "Tue",y:  "Thu",r: 19},{x: "wed",y:  "wed",r: 50}]
-    }]
-  };
-
-
-  var ctx = document.getElementById('bubble');
-  var bubble = new Chart(ctx, {
-    type: 'bubble',
-    data: bubbleChartData,
-    options: {
-      responsive: true,
-      title: {
-        display: true,
-        text:'Weekly activity'
-      },
-        scales: {
-          y: {
-              // will this create y-axis with days of week?
-              type: 'category',
-              labels: ["Mon", "Tue", "wed", "Thu"]
-          },
-          x: {
-            type: 'category',
-            labels: ["Mon", "Tue", "wed", "Thu"]
-          }
-        }
-      
-    }
-  });
+<script src="./char-js/script-chart-buble.js">
+ 
 </script>
 
 <script src="./d3-js/script-line-general.js"></script>
