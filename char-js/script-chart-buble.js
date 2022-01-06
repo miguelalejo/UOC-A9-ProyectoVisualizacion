@@ -153,7 +153,7 @@
               }
           }
           
-            paletaColor = palette('cb-Purples', mapaLabel.size).map(function(hex) {
+            paletaColor = palette('cb-Oranges', mapaLabel.size).map(function(hex) {
               color = '#' + hex+'ff';
               return hexToRGB('#' +hex,0.5); });
             
@@ -189,7 +189,7 @@
                   },
                   title: {
                     display: true,
-                    text: 'Empresas x Contratos - Montos'
+                    text: 'Empresas x Productos - Nro. Contratos'
                   }
                 },
                   scales: {
