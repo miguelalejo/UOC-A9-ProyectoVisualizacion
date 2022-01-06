@@ -36,19 +36,9 @@
             }
 
             myData = [];
-            function hexToRGB(hex, alpha) {
-              var r = parseInt(hex.slice(1, 3), 16),
-                  g = parseInt(hex.slice(3, 5), 16),
-                  b = parseInt(hex.slice(5, 7), 16);
           
-              if (alpha) {
-                  return "rgba(" + r + ", " + g + ", " + b + ", " + alpha + ")";
-              } else {
-                  return "rgb(" + r + ", " + g + ", " + b + ")";
-              }
-          }
           
-            paletaColor = palette('cb-Purples', mapaLabel.size).map(function(hex) {
+            paletaColor = palette('cb-Blues', mapaLabel.size).map(function(hex) {
               color = '#' + hex+'ff';
               return hexToRGB('#' +hex,0.5); });
             
@@ -72,7 +62,7 @@
               datasets: myData
             };
   
-            var ctx = document.getElementById('bubble');
+            var ctx = document.getElementById('bubble-mon-productos-empresas');
             var bubble = new Chart(ctx, {
               type: 'bubble',
               data: bubbleChartData,
@@ -84,7 +74,7 @@
                   },
                   title: {
                     display: true,
-                    text: 'Empresas x Productos - Montos'
+                    text: 'Empresas x Productos'
                   }
                 },
                   scales: {
@@ -141,18 +131,7 @@
             }
 
             myData = [];
-            function hexToRGB(hex, alpha) {
-              var r = parseInt(hex.slice(1, 3), 16),
-                  g = parseInt(hex.slice(3, 5), 16),
-                  b = parseInt(hex.slice(5, 7), 16);
-          
-              if (alpha) {
-                  return "rgba(" + r + ", " + g + ", " + b + ", " + alpha + ")";
-              } else {
-                  return "rgb(" + r + ", " + g + ", " + b + ")";
-              }
-          }
-          
+           
             paletaColor = palette('cb-Oranges', mapaLabel.size).map(function(hex) {
               color = '#' + hex+'ff';
               return hexToRGB('#' +hex,0.5); });
@@ -177,7 +156,7 @@
               datasets: myData
             };
   
-            var ctx = document.getElementById('bubble-contratos');
+            var ctx = document.getElementById('bubble-nro-productos-empresas');
             var bubble = new Chart(ctx, {
               type: 'bubble',
               data: bubbleChartData,
@@ -189,7 +168,7 @@
                   },
                   title: {
                     display: true,
-                    text: 'Empresas x Productos - Nro. Contratos'
+                    text: 'Empresas x Productos'
                   }
                 },
                   scales: {
