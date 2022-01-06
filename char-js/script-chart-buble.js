@@ -9,48 +9,52 @@
             console.log(length);
   
             labels_x = [];
-            labels_y= [];
+            labels_y = [];
+            labels = [];
             const mapaLabel = new Map();
             for (i = 0; i < length; i++) {
-                tipoEmpresa= data[i].tipo;
-                tipoProducto= data[i].Producto;               
-                if(!labels_x.includes(tipoEmpresa)){
-                  labels_x.push(tipoEmpresa);
-                }
-                if(!labels_y.includes(tipoProducto)){
-                  labels_y.push(tipoProducto);
+                categoria = data[i].categorie;
+                labels.push(categoria);
+                valores = data[i].values 
+                dataValues = []         
+                for (j = 0; j < valores.length; j++) {                  
+                  tipoEmpresa= valores[j].tipo_empresa;
+                  tipoProducto= valores[j].Producto;               
+                  if(!labels_x.includes(tipoEmpresa)){
+                    labels_x.push(tipoEmpresa);
+                  }
+                  if(!labels_y.includes(tipoProducto)){
+                    labels_y.push(tipoProducto);
+                  }
+                  let obj = {};
+                  obj['r'] = valores[j].value;
+                  obj['y'] = tipoProducto;
+                  obj['x'] = tipoEmpresa;            
+                  dataValues.push(obj);                         
                 }               
+                mapaLabel.set(categoria,dataValues)
             }
-            myData = []
-            data.forEach((value) => {
+
+            myData = [];
+            paletaColor = palette('diverging', mapaLabel.size).map(function(hex) {return '#2F' + hex; });
+            mapaLabel.forEach((value, key) => {
+              var indice = Array.from(mapaLabel.keys()).indexOf(key);
+              console.log(indice);
               let obj = {};
-              obj['r'] = value.amount;
-              obj['y'] = value.Producto;
-              obj['x'] = value.tipo;            
-              myData.push(obj);        
+              obj['label'] = key;
+              obj['data'] = value;
+              obj['borderColor'] = paletaColor[indice];
+              obj['backgroundColor'] = paletaColor[indice];
+              myData.push(obj);          
             });
-            var bubbleBackgroundColor = function() {
-              return 'rgba(255, 206, 86, 0.2)'
-            };
-            var bubbleBorderColor = function() {
-                      return 'rgba(255, 206, 86, 1)'
-            };
+
             var bubbleChartData = {
               animation: {
                 duration: 10
               },
               // Documentation says the tick values tick.min & tick.max must be in the Labels array. So thats what I have below
               
-              datasets: [{
-                label: "Requests and bookings",
-                fill: false,
-                lineTension: 0.1,
-                backgroundColor: bubbleBackgroundColor(),
-                borderColor: bubbleBorderColor(),
-           
-                // how would the data change ...how can the numbers for y be replaced with strings
-                data: myData
-              }]
+              datasets: myData
             };
   
             var ctx = document.getElementById('bubble');
