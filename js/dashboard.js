@@ -1,6 +1,23 @@
 (function($) {
 	'use strict';
 	$(function() {
+		var productorderGage = new JustGage({
+			id: 'productorder-gage',
+			value: 2100,
+			min: 0,
+			max: 5000,
+			hideMinMax: false,
+			symbol: 'K',
+			label: 'You have done 57.6% more ordes today',
+			valueFontColor: "#001737",
+			labelFontColor: "#001737",
+			gaugeWidthScale: 0.3,
+			counter: true,
+			relativeGaugeSize: true,
+			gaugeColor: "#f0f0f0",
+			levelColors: [ "#fcd53b" ]
+		});
+		$("#productorder-gage").append('<div class="product-order"><div class="icon-inside-circle"><i class="mdi mdi-basket"></i></div></div>');
 		var salesDifferencedata = {
 			labels: ["50+", "35-50", "25-35", "18-25", "0-18"],
 			datasets: [{
@@ -644,42 +661,42 @@
 		}
 
 		var visitorsTodayData = {
-			labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"],
+			labels: ["Ene", "Feb", "May", "Jul", "Ago","Sep","Oct","Nov","Dic"],
 			datasets: [
 				{
-				label: 'Cost',
-				data: [15, 25, 20, 18, 24, 20, 16, 20],
+					label: 'COMPAÑÍA LIMITADA',
+					data: [2997.0, 18720.0, 0.0, 0.0, 14000.0, 179075.85, 44885.0, 0.0, 143630.13],
+					backgroundColor: [
+						paletaColorProvedor[0],
+					],
+					borderColor: [
+						paletaColorProvedorLinea[0],
+					],
+					borderWidth: 2,
+					fill: true,
+					pointBorderWidth: 4,
+				},
+				{
+				label: 'PERSONA NATURAL',
+				data: [14127.53, 84000.0, 0.0, 116087.4, 21673.44, 5000.0, 74800.0, 13861.0, 13477.1],
 				backgroundColor: [
-						'rgba(238, 91, 91, .9)',
+						paletaColorProvedor[1],
 				],
 				borderColor: [
-						'#ee5b5b',
+					paletaColorProvedorLinea[1],
 				],
 				borderWidth: 2,
 				fill: true,
 				pointBorderWidth: 4,
-				},
+				},				
 				{
-				label: 'Product',
-				data: [20, 30, 25, 23, 29, 25, 21, 25],
+				label: 'SOCIEDAD ANÓNIMA',
+				data: [0.0, 0.0, 147786.5, 12395.2, 36705.58, 124490.0, 55420.0, 0.0, 0.0],
 				backgroundColor: [
-						'rgba(70, 77, 238, 1)',
+						paletaColorProvedor[2],
 				],
 				borderColor: [
-						'#464dee',
-				],
-				borderWidth: 2,
-				fill: true,
-				pointBorderWidth: 4,
-				},
-				{
-				label: 'Margin',
-				data: [25, 35, 30, 28, 33, 30, 26, 30],
-				backgroundColor: [
-						'rgba(81, 225, 195, .9)',
-				],
-				borderColor: [
-						'#51e1c3'
+					paletaColorProvedorLinea[2],
 				],
 				borderWidth: 2,
 				fill: true,
@@ -1146,23 +1163,7 @@
 			});
 			document.getElementById('support-tracker-legend').innerHTML = barChart.generateLegend();
 		}
-		var productorderGage = new JustGage({
-			id: 'productorder-gage',
-			value: 3245,
-			min: 0,
-			max: 5000,
-			hideMinMax: true,
-			symbol: 'K',
-			label: 'You have done 57.6% more ordes today',
-			valueFontColor: "#001737",
-			labelFontColor: "#001737",
-			gaugeWidthScale: 0.3,
-			counter: true,
-			relativeGaugeSize: true,
-			gaugeColor: "#f0f0f0",
-			levelColors: [ "#fcd53b" ]
-		});
-		$("#productorder-gage").append('<div class="product-order"><div class="icon-inside-circle"><i class="mdi mdi-basket"></i></div></div>');
+		
 
 		// Remove pro banner on close
     document.querySelector('#bannerClose').addEventListener('click',function() {

@@ -38,7 +38,7 @@
             myData = [];
           
           
-            paletaColor = palette('cb-Blues', mapaLabel.size).map(function(hex) {
+            paletaColor = palette('cb-Set3', mapaLabel.size).map(function(hex) {
               color = '#' + hex+'ff';
               return hexToRGB('#' +hex,0.5); });
             
@@ -132,7 +132,7 @@
 
             myData = [];
            
-            paletaColor = palette('cb-Oranges', mapaLabel.size).map(function(hex) {
+            paletaColor = palette('cb-Set3', mapaLabel.size).map(function(hex) {
               color = '#' + hex+'ff';
               return hexToRGB('#' +hex,0.5); });
             
