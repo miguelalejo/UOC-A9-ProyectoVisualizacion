@@ -760,7 +760,7 @@
 				duration: 1400,
 				width: 42,
 			});
-			bar.animate(.363); // Number from 0.0 to 1.0
+			bar.animate(.301); // Number from 0.0 to 1.0
 		}
 		if ($('#circleProgress2').length) {
 			var bar = new ProgressBar.Circle(circleProgress2, {
@@ -772,7 +772,7 @@
 				width: 42,
 
 			});
-			bar.animate(.329); // Number from 0.0 to 1.0
+			bar.animate(.318); // Number from 0.0 to 1.0
 		}
 		var newClientData = {
 			labels: ["Jan", "Feb", "Mar", "Apr", "May"],
