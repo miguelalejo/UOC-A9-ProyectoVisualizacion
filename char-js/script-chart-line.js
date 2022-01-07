@@ -23,6 +23,7 @@
                   data: values,
                   label: "Nro. Contratos x Mes",
                   borderColor: paletaColorLinea[0],
+                  backgroundColor: paletaColorLinea[0],
                   fill: false
                 }
               ]
@@ -44,7 +45,7 @@
   crearCharLineaMontosContratos();
   async function crearCharLineaMontosContratos() {
             const response = await fetch(
-'https://raw.githubusercontent.com/miguelalejo/UOC-A9-ProyectoVisualizacion/main/data/line-nro-contratos-mes.json');
+'https://raw.githubusercontent.com/miguelalejo/UOC-A9-ProyectoVisualizacion/main/data/line-monto-contratos-mes.json');
             console.log(response);
             const data = await response.json();
             console.log(data);
@@ -65,6 +66,7 @@
               datasets: [{ 
                   data: values,
                   label: "Montos Contratos x Mes",
+                  backgroundColor: paletaColorLinea[1],
                   borderColor: paletaColorLinea[1],
                   fill: false
                 }
