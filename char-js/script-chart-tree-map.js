@@ -1,19 +1,10 @@
 crearCharTreeCompradores();
   async function crearCharTreeCompradores() {
             const response = await fetch(
-'https://raw.githubusercontent.com/miguelalejo/UOC-A9-ProyectoVisualizacion/main/data/line-monto-contratos-mes.json');
+'https://raw.githubusercontent.com/miguelalejo/UOC-A9-ProyectoVisualizacion/main/data/tree-empresas.json');
             console.log(response);
-            const data = await response.json();
-            console.log(data);
-            length = data.length;
-            console.log(length);
-  
-            labels = [];
-            values = [];
-            for (i = 0; i < length; i++) {
-                labels.push(data[i].date);
-                values.push(data[i].close);
-            }
+            const data_tree = await response.json();
+           
   
             Utils.load(() => {
 				const ctx = document.getElementById('chart-area').getContext('2d');
@@ -21,7 +12,7 @@ crearCharTreeCompradores();
 					type: 'treemap',
 					data: {
 						datasets: [{
-							tree: statsByState,
+							tree: data_tree,
 							key: 'area',
 							groups: ['region', 'division', 'code'],
 							spacing: -0.5,
