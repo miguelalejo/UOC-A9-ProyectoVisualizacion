@@ -399,7 +399,23 @@
 															<p class="mb-4">+5.2% 7 days</p>
 															<div id="serveLoading-legend" class="revenuechart-legend">f</div>
 														</div>
-														<canvas id="bubble-nro-productos-empresas"></canvas>
+														<div id="controls2">
+															<select id="data-key2">
+																<option value="montos" selected>Montos</option>
+																<option value="contratos" >Contratos</option>																
+															</select>
+															<input type="checkbox" id="region" value="region" name="region">
+															<label for="region">Proveedor</label>
+															<input type="checkbox" id="division" value="division" name="division">
+															<label for="division">Producto</label>
+															<input type="checkbox" id="code" value="code" name="code">
+															<label for="state">Código</label>
+															<input type="checkbox" id="rtl" value="rtl" name="rtl">
+															<label for="rtl">Rotar</label>
+														</div>
+														<div id="canvas-holder">
+															<canvas id="chart-area-pro" width="800" height="400"></canvas>
+														</div>
 													</div>
 													
 												</div>

@@ -80,8 +80,8 @@ crearCharTreeCompradores();
 										const dataset = data.datasets[item.datasetIndex];
 										const dataItem = dataset.data[item.index];
 										const obj = dataItem._data;
-										const label = obj.state || obj.division || obj.region || obj.state;
-										return label + ': ' + "Hola";
+										const label = obj.state || obj.division || obj.region ;
+										return label + ' - ' +  dataItem.v;
 									}
 								}
 							}
@@ -98,7 +98,7 @@ crearCharTreeCompradores();
 				function updateGroups() {
 					const groups = tm.data.datasets[0].groups = [];
 					let rtl = false;
-					document.querySelectorAll('input:checked').forEach((cb) => {
+					document.querySelectorAll('#controls input:checked').forEach((cb) => {
 						if (cb.value === 'rtl') {
 							rtl = true;
 						} else {
@@ -108,12 +108,130 @@ crearCharTreeCompradores();
 					tm.data.datasets[0].rtl = rtl;
 					tm.update();
 				}
-				document.querySelectorAll('input[type="checkbox"]').forEach((cb) => {
+				document.querySelectorAll('#controls input[type="checkbox"]').forEach((cb) => {
 					cb.addEventListener('change', () => {
 						updateGroups();
 					});
 				});
 			});
+  }
+
+  crearCharTreeProveedores();
+  async function crearCharTreeProveedores() {
+	const response = await fetch(
+		'https://raw.githubusercontent.com/miguelalejo/UOC-A9-ProyectoVisualizacion/main/data/tree-proveedor.json');
+					console.log(response);
+					const data_tree = await response.json();
+				   
+		  
+					Utils.load(() => {
+						const ctx = document.getElementById('chart-area-pro').getContext('2d');
+						const tm = window.chart = new Chart(ctx, {
+							type: 'treemap',
+							data: {
+								datasets: [{
+									tree: data_tree,
+									key: 'montos',
+									groups: ['region', 'division', 'code'],
+									spacing: -0.5,
+									borderWidth: 0.5,
+									borderColor: 'rgba(200,200,200,1)',
+									hoverBackgroundColor: 'rgba(220,230,220,0.5)',
+									backgroundColor(ctx) {
+										const item = ctx.dataset.data[ctx.dataIndex];
+										if (!item) {
+											return;
+										}
+										const a = item.v / (item.gs || item.s) / 2 + 0.5;
+										switch (item.l) {
+										case 0:
+											switch (item.g) {
+											case 'COMPAÑÍA LIMITADA': return paletaColorProvedorLinea[0];
+											case 'PERSONA NATURAL': return paletaColorProvedorLinea[1];
+											case 'SOCIEDAD ANÓNIMA': return paletaColorProvedorLinea[2];
+											
+											
+											case 'REACTIVOS COVID': return paletaColorProducto[0];
+											case 'MASCARILLA KN95': return paletaColorProducto[1];
+											case 'BOLSAS CADAVER': return paletaColorProducto[2];
+											case 'SERVICIO LABORATORIO': return paletaColorProducto[3];
+											case 'PRUEBAS RAPIDAS': return paletaColorProducto[4];
+											case 'PRUEBAS PCR': return paletaColorProducto[5];
+		
+											default: return '#e6beff';
+											}
+										case 1:
+											return Chart.helpers.color('white').alpha(0.4).rgbString();
+										default:
+											return Chart.helpers.color('white').alpha(0.2).rgbString();
+										}
+									},
+									color: "#00000",
+									font: {
+										family: 'Tahoma',
+										size: 12,
+										style: 'bold'
+									},
+									hoverFont: {
+										family: 'Tahoma',
+										size: 14,
+										style: 'bold'
+									}
+								}]
+							},
+							options: {
+								maintainAspectRatio: false,
+								plugins: {
+									title: {
+										display: false,
+										text: 'Empresas'
+									},
+									legend: {
+										display: false
+									},
+									tooltips: {
+										callbacks: {
+											title(item, data) {
+												return data.datasets[item[0].datasetIndex].key;
+											},
+											label(item, data) {
+												const dataset = data.datasets[item.datasetIndex];
+												const dataItem = dataset.data[item.index];
+												const obj = dataItem._data;
+												const label = obj.state || obj.division || obj.region ;
+												return label + ' - ' +  dataItem.v;
+											}
+										}
+									}
+								}
+							}
+						});
+			
+						const sel = document.getElementById('data-key2');
+						sel.addEventListener('change', () => {
+							tm.data.datasets[0].key = sel.value;
+							tm.update();
+						});
+			
+						function updateGroups() {
+							const groups = tm.data.datasets[0].groups = [];
+							let rtl = false;
+							document.querySelectorAll('#controls2 input:checked').forEach((cb) => {
+								if (cb.value === 'rtl') {
+									rtl = true;
+								} else {
+									groups.push(cb.value);
+								}
+							});
+							tm.data.datasets[0].rtl = rtl;
+							tm.update();
+						}
+						document.querySelectorAll('#controls2 input[type="checkbox"]').forEach((cb) => {
+							cb.addEventListener('change', () => {
+								updateGroups();
+							});
+						});
+					});
   }
 
 
