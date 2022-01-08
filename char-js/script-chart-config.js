@@ -18,3 +18,10 @@ paletaColorProvedor = palette('cb-Dark2', 3).map(function(hex) {
 
 paletaColorProvedorLinea = palette('cb-Dark2', 3).map(function(hex) {                
                     return hexToRGB('#' +hex,1); });
+
+paletaColorTipoEmpresa = palette('cb-Accent', 4).map(function(hex) {                
+                        return hexToRGB('#' +hex,0.5); });
+                    
+paletaColorProducto = ['rgb(25, 135, 84)','rgb(220, 53, 69)','rgb(255, 193, 7)','rgba(30, 0, 0,0.3)','rgb(91, 202, 240)','rgb(13, 110, 253)']
+
+                   

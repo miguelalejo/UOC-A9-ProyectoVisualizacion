@@ -13,12 +13,52 @@ crearCharTreeCompradores();
 					data: {
 						datasets: [{
 							tree: data_tree,
-							key: 'cantidad',
+							key: 'montos',
 							groups: ['region', 'division', 'code'],
 							spacing: -0.5,
 							borderWidth: 0.5,
 							borderColor: 'rgba(200,200,200,1)',
 							hoverBackgroundColor: 'rgba(220,230,220,0.5)',
+							backgroundColor(ctx) {
+								const item = ctx.dataset.data[ctx.dataIndex];
+								if (!item) {
+									return;
+								}
+								const a = item.v / (item.gs || item.s) / 2 + 0.5;
+								switch (item.l) {
+								case 0:
+									switch (item.g) {
+									case 'HOSPITAL': return paletaColorTipoEmpresa[0];
+									case 'GOBIERNO DESCENTRALIZADO': return paletaColorTipoEmpresa[1];
+									case 'EMPRESA PÚBLICA': return paletaColorTipoEmpresa[2];
+									case 'OTROS': return paletaColorTipoEmpresa[3];
+									
+									case 'REACTIVOS COVID': return paletaColorProducto[0];
+									case 'MASCARILLA KN95': return paletaColorProducto[1];
+									case 'BOLSAS CADAVER': return paletaColorProducto[2];
+									case 'SERVICIO LABORATORIO': return paletaColorProducto[3];
+									case 'PRUEBAS RAPIDAS': return paletaColorProducto[4];
+									case 'PRUEBAS PCR': return paletaColorProducto[5];
+
+									default: return '#e6beff';
+									}
+								case 1:
+									return Chart.helpers.color('white').alpha(0.4).rgbString();
+								default:
+									return Chart.helpers.color('white').alpha(0.2).rgbString();
+								}
+							},
+							color: "#00000",
+							font: {
+								family: 'Tahoma',
+								size: 12,
+								style: 'bold'
+							},
+							hoverFont: {
+								family: 'Tahoma',
+								size: 14,
+								style: 'bold'
+							}
 						}]
 					},
 					options: {
@@ -41,7 +81,7 @@ crearCharTreeCompradores();
 										const dataItem = dataset.data[item.index];
 										const obj = dataItem._data;
 										const label = obj.state || obj.division || obj.region || obj.state;
-										return label + ': ' + dataItem.v;
+										return label + ': ' + "Hola";
 									}
 								}
 							}
