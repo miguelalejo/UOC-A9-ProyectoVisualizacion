@@ -13,8 +13,8 @@
 paletaColorLinea = palette('cb-Set2', 5).map(function(hex) {
               return hexToRGB('#' +hex,0.5); });
 
-paletaColorProvedor = palette('cb-Set3', 3).map(function(hex) {                
+paletaColorProvedor = palette('cb-Dark2', 3).map(function(hex) {                
                 return hexToRGB('#' +hex,0.5); });
 
-paletaColorProvedorLinea = palette('cb-Set3', 3).map(function(hex) {                
+paletaColorProvedorLinea = palette('cb-Dark2', 3).map(function(hex) {                
                     return hexToRGB('#' +hex,1); });

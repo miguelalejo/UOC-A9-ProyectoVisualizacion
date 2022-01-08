@@ -14,10 +14,250 @@
 			gaugeWidthScale: 0.3,
 			counter: true,
 			relativeGaugeSize: true,
-			gaugeColor: "#f0f0f0",
+			gaugeColor: "#fa424a",
 			levelColors: [ "#fcd53b" ]
 		});
-		$("#productorder-gage").append('<div class="product-order"><div class="icon-inside-circle"><i class="mdi mdi-basket"></i></div></div>');
+		$("#productorder-gage").append('<div class="product-order"></div>');
+		var salesDifferencedata = {
+			labels: ["50+", "35-50", "25-35", "18-25", "0-18"],
+			datasets: [{
+				label: 'Best Sellers',
+				data: [22, 28, 18, 20, 12],
+				backgroundColor: [
+						'#8169f2',
+						'#6a4df5',
+						'#4f2def',
+						'#2b0bc5',
+						'#180183',
+				],
+				borderColor: [
+						'#8169f2',
+						'#6a4df5',
+						'#4f2def',
+						'#2b0bc5',
+						'#180183',
+				],
+				borderWidth: 2,
+				fill: false
+			}],
+		};
+		var productorderGageReact = new JustGage({
+			id: 'productorder-gage-reac',
+			value: 4,
+			min: 0.33,
+			max: 34.0,
+			hideMinMax: false,
+			symbol: '$',
+			label: '',
+			valueFontColor: "#001737",
+			labelFontColor: "#001737",
+			gaugeWidthScale: 0.3,
+			counter: true,
+			relativeGaugeSize: true,
+			gaugeColor: "#fa424a",
+			levelColors: [ "#fcd53b" ]
+		});
+		$("#productorder-gage-reac").append('<div class="product-order"></div>');
+		var salesDifferencedata = {
+			labels: ["50+", "35-50", "25-35", "18-25", "0-18"],
+			datasets: [{
+				label: 'Best Sellers',
+				data: [22, 28, 18, 20, 12],
+				backgroundColor: [
+						'#8169f2',
+						'#6a4df5',
+						'#4f2def',
+						'#2b0bc5',
+						'#180183',
+				],
+				borderColor: [
+						'#8169f2',
+						'#6a4df5',
+						'#4f2def',
+						'#2b0bc5',
+						'#180183',
+				],
+				borderWidth: 2,
+				fill: false
+			}],
+		};
+		var productorderGageMask = new JustGage({
+			id: 'productorder-gage-mask',
+			value: 5,
+			min: 0.05,
+			max: 26,
+			hideMinMax: false,
+			symbol: '$',
+			label: '',
+			valueFontColor: "#001737",
+			labelFontColor: "#001737",
+			gaugeWidthScale: 0.3,
+			counter: true,
+			relativeGaugeSize: true,
+			gaugeColor: "#fa424a",
+			levelColors: [ "#fcd53b" ]
+		});
+		$("#productorder-gage-mask").append('<div class="product-order"></div>');
+		var salesDifferencedata = {
+			labels: ["50+", "35-50", "25-35", "18-25", "0-18"],
+			datasets: [{
+				label: 'Best Sellers',
+				data: [22, 28, 18, 20, 12],
+				backgroundColor: [
+						'#8169f2',
+						'#6a4df5',
+						'#4f2def',
+						'#2b0bc5',
+						'#180183',
+				],
+				borderColor: [
+						'#8169f2',
+						'#6a4df5',
+						'#4f2def',
+						'#2b0bc5',
+						'#180183',
+				],
+				borderWidth: 2,
+				fill: false
+			}],
+		};
+		var productorderGagePruRap = new JustGage({
+			id: 'productorder-gage-prurap',
+			value: 16,
+			min: 0.5,
+			max: 45.0,
+			hideMinMax: false,
+			symbol: '$',
+			label: '',
+			valueFontColor: "#001737",
+			labelFontColor: "#001737",
+			gaugeWidthScale: 0.3,
+			counter: true,
+			relativeGaugeSize: true,
+			gaugeColor: "#fa424a",
+			levelColors: [ "#fcd53b" ]
+		});
+		$("#productorder-gage-prurap").append('<div class="product-order"></div>');
+		var salesDifferencedata = {
+			labels: ["50+", "35-50", "25-35", "18-25", "0-18"],
+			datasets: [{
+				label: 'Best Sellers',
+				data: [22, 28, 18, 20, 12],
+				backgroundColor: [
+						'#8169f2',
+						'#6a4df5',
+						'#4f2def',
+						'#2b0bc5',
+						'#180183',
+				],
+				borderColor: [
+						'#8169f2',
+						'#6a4df5',
+						'#4f2def',
+						'#2b0bc5',
+						'#180183',
+				],
+				borderWidth: 2,
+				fill: false
+			}],
+		};
+		var productorderGageCad = new JustGage({
+			id: 'productorder-gage-cad',
+			value: 37,
+			min: 0.11,
+			max: 140.0,
+			hideMinMax: false,
+			symbol: '$',
+			label: '',
+			valueFontColor: "#001737",
+			labelFontColor: "#001737",
+			gaugeWidthScale: 0.3,
+			counter: true,
+			relativeGaugeSize: true,
+			gaugeColor: "#fa424a",
+			levelColors: [ "#fcd53b" ]
+		});
+		$("#productorder-gage-cad").append('<div class="product-order"></div>');
+		var salesDifferencedata = {
+			labels: ["50+", "35-50", "25-35", "18-25", "0-18"],
+			datasets: [{
+				label: 'Best Sellers',
+				data: [22, 28, 18, 20, 12],
+				backgroundColor: [
+						'#8169f2',
+						'#6a4df5',
+						'#4f2def',
+						'#2b0bc5',
+						'#180183',
+				],
+				borderColor: [
+						'#8169f2',
+						'#6a4df5',
+						'#4f2def',
+						'#2b0bc5',
+						'#180183',
+				],
+				borderWidth: 2,
+				fill: false
+			}],
+		};
+		var productorderGagePcr = new JustGage({
+			id: 'productorder-gage-pcr',
+			value: 63,
+			min: 6.75,
+			max: 120.0,
+			hideMinMax: false,
+			symbol: '$',
+			label: '',
+			valueFontColor: "#001737",
+			labelFontColor: "#001737",
+			gaugeWidthScale: 0.3,
+			counter: true,
+			relativeGaugeSize: true,
+			gaugeColor: "#fa424a",
+			levelColors: [ "#fcd53b" ]
+		});
+		$("#productorder-gage-pcr").append('<div class="product-order"></div>');
+		var salesDifferencedata = {
+			labels: ["50+", "35-50", "25-35", "18-25", "0-18"],
+			datasets: [{
+				label: 'Best Sellers',
+				data: [22, 28, 18, 20, 12],
+				backgroundColor: [
+						'#8169f2',
+						'#6a4df5',
+						'#4f2def',
+						'#2b0bc5',
+						'#180183',
+				],
+				borderColor: [
+						'#8169f2',
+						'#6a4df5',
+						'#4f2def',
+						'#2b0bc5',
+						'#180183',
+				],
+				borderWidth: 2,
+				fill: false
+			}],
+		};
+		var productorderGageSerLab = new JustGage({
+			id: 'productorder-gage-serlab',
+			value: 55,
+			min: 15,
+			max: 161,
+			hideMinMax: false,
+			symbol: 'K$',
+			label: 'MILES',
+			valueFontColor: "#001737",
+			labelFontColor: "#001737",
+			gaugeWidthScale: 0.3,
+			counter: true,
+			relativeGaugeSize: true,
+			gaugeColor: "#fa424a",
+			levelColors: [ "#fcd53b" ]
+		});
+		$("#productorder-gage-serlab").append('<div class="product-order"></div>');
 		var salesDifferencedata = {
 			labels: ["50+", "35-50", "25-35", "18-25", "0-18"],
 			datasets: [{

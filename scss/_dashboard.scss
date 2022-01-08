@@ -49,6 +49,16 @@
 	color: $dark;
 	text-transform: uppercase;
 }
+
+.line-chart-row-title-rel {
+	font-size: 15px;
+	font-weight: 600;	
+	bottom: 24px;
+	left: 15px;
+	color: $dark;
+	text-transform: uppercase;
+}
+
 .climate-info-border {
 	&:before{
 		content: '';

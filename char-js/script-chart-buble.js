@@ -48,8 +48,8 @@
               let obj = {};
               obj['label'] = key;
               obj['data'] = value;
-              obj['borderColor'] = paletaColor[indice];
-              obj['backgroundColor'] = paletaColor[indice];                       
+              obj['borderColor'] = paletaColorProvedor[indice];
+              obj['backgroundColor'] = paletaColorProvedor[indice];                       
               myData.push(obj);          
             });
 
@@ -142,8 +142,8 @@
               let obj = {};
               obj['label'] = key;
               obj['data'] = value;
-              obj['borderColor'] = paletaColor[indice];
-              obj['backgroundColor'] = paletaColor[indice];                       
+              obj['borderColor'] = paletaColorProvedor[indice];
+              obj['backgroundColor'] = paletaColorProvedor[indice];                       
               myData.push(obj);          
             });
 
