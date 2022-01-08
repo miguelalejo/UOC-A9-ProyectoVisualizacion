@@ -13,7 +13,7 @@ crearCharTreeCompradores();
 					data: {
 						datasets: [{
 							tree: data_tree,
-							key: 'area',
+							key: 'cantidad',
 							groups: ['region', 'division', 'code'],
 							spacing: -0.5,
 							borderWidth: 0.5,
@@ -25,8 +25,8 @@ crearCharTreeCompradores();
 						maintainAspectRatio: false,
 						plugins: {
 							title: {
-								display: true,
-								text: 'US stats by state'
+								display: false,
+								text: 'Empresas'
 							},
 							legend: {
 								display: false
@@ -34,13 +34,13 @@ crearCharTreeCompradores();
 							tooltips: {
 								callbacks: {
 									title(item, data) {
-										return "Hola";
+										return data.datasets[item[0].datasetIndex].key;
 									},
 									label(item, data) {
 										const dataset = data.datasets[item.datasetIndex];
 										const dataItem = dataset.data[item.index];
 										const obj = dataItem._data;
-										const label = obj.state || obj.division || obj.region;
+										const label = obj.state || obj.division || obj.region || obj.state;
 										return label + ': ' + dataItem.v;
 									}
 								}
