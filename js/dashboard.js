@@ -1405,9 +1405,6 @@
 		}
 		
 
-		// Remove pro banner on close
-    document.querySelector('#bannerClose').addEventListener('click',function() {
-			$('#pro-banner').slideUp();
-    });
+	
 	});
 })(jQuery);
