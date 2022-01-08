@@ -52,12 +52,12 @@ crearCharTreeCompradores();
 							font: {
 								family: 'Tahoma',
 								size: 12,
-								style: 'bold'
+								
 							},
 							hoverFont: {
 								family: 'Tahoma',
 								size: 14,
-								style: 'bold'
+								
 							}
 						}]
 					},
@@ -170,12 +170,12 @@ crearCharTreeCompradores();
 									font: {
 										family: 'Tahoma',
 										size: 12,
-										style: 'bold'
+										
 									},
 									hoverFont: {
 										family: 'Tahoma',
 										size: 14,
-										style: 'bold'
+										
 									}
 								}]
 							},
