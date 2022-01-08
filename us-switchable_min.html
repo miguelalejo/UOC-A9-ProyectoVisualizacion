@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>US population, area or population/area by state</title>
+	<script src="./js/utils.js"></script>
+	<script src="./us_stats_by_state_min.js"></script>
+	<link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+
+<body>
+	<div id="controls">
+		<select id="data-key">
+			<option value="area" selected>Area (km<sup>2</sup>)</option>
+			<option value="population">Population</option>
+		</select>
+		<input type="checkbox" id="region" value="region" name="region">
+		<label for="region">Region</label>
+		<input type="checkbox" id="division" value="division" name="division">
+		<label for="division">Division</label>
+		<input type="checkbox" id="code" value="code" name="code">
+		<label for="state">Code</label>
+		<input type="checkbox" id="rtl" value="rtl" name="rtl">
+		<label for="rtl">RTL</label>
+	</div>
+	<div id="canvas-holder">
+		<canvas id="chart-area" width="800" height="400"></canvas>
+	</div>
+
+	<script src="./char-js/script-chart-tree-map.js">
+		
+	</script>
+</body>
+
+</html>

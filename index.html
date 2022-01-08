@@ -343,34 +343,74 @@
 								</div>
 							</div>
 						</div>
-					</div>					
-					<div class="row">
-						<div class="col-sm-6 grid-margin grid-margin-md-0 stretch-card">
-							<div class="card">
-								<div class="card-body">
-									<div class="d-flex align-items-center justify-content-between">
-										<h4 class="card-title">Support Tracker</h4>
-										<h4 class="text-success font-weight-bold">Tickets<span class="text-dark ms-3">163</span></h4>
-									</div>
-									<div id="support-tracker-legend" class="support-tracker-legend"></div>
-									<canvas id="supportTracker"></canvas>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-6 grid-margin grid-margin-md-0 stretch-card">
-							<div class="card">
-								<div class="card-body">
-									<div class="d-lg-flex align-items-center justify-content-between mb-4">
-										<h4 class="card-title">Product Orders</h4>
-										<p class="text-dark">+5.2% vs last 7 days</p>
-									</div>
-									<div class="product-order-wrap padding-reduced">
-										<div id="productorder-gage" class="gauge productorder-gage"></div>
-									</div>
-								</div>
-							</div>
-						</div>
 					</div>
+					<div class="row">
+						<div class="col-sm-12 flex-column d-flex stretch-card">
+							<div class="row">
+								
+							</div>
+							<div class="row">
+								<div class="col-sm-12 grid-margin d-flex stretch-card">
+									<div class="card">
+										<div class="card-body">
+											
+												<div class="d-flex align-items-center justify-content-between">
+													<h4 class="text-dark font-weight-bold"><b>Top empresas y proveedores</b></h4>
+													<i class="mdi mdi-account-card-details	mdi-18px text-dark"></i>
+												</div>
+												
+											
+											<div>
+												<ul class="nav nav-tabs tab-no-active-fill" role="tablist">
+													<li class="nav-item">
+														<a class="nav-link active ps-2 pe-2" id="revenue-for-last-month-tab2" data-bs-toggle="tab" href="#revenue-for-last-month2" role="tab" aria-controls="revenue-for-last-month" aria-selected="true">Empresas</a> 
+													</li>
+													<li class="nav-item">
+														<a class="nav-link ps-2 pe-2" id="server-loading-tab2" data-bs-toggle="tab" href="#server-loading2" role="tab" aria-controls="server-loading" aria-selected="false">Proveedores</a>
+													</li>													
+												</ul>
+												<div class="tab-content tab-no-active-fill-tab-content">
+													<div class="tab-pane fade show active" id="revenue-for-last-month2" role="tabpanel" aria-labelledby="revenue-for-last-month-tab">
+														<div class="d-lg-flex justify-content-between">
+															<p class="mb-4">+5.2% vs last 7 days</p>
+															<div id="revenuechart-legend" class="revenuechart-legend">f</div>
+														</div>														
+														<div id="support-tracker-legend" class="support-tracker-legend"></div>
+														<div id="controls">
+															<select id="data-key">
+																<option value="area" selected>Area (km<sup>2</sup>)</option>
+																<option value="population">Population</option>
+															</select>
+															<input type="checkbox" id="region" value="region" name="region">
+															<label for="region">Region</label>
+															<input type="checkbox" id="division" value="division" name="division">
+															<label for="division">Division</label>
+															<input type="checkbox" id="code" value="code" name="code">
+															<label for="state">Code</label>
+															<input type="checkbox" id="rtl" value="rtl" name="rtl">
+															<label for="rtl">RTL</label>
+														</div>
+														<div id="canvas-holder">
+															<canvas id="chart-area" width="800" height="400"></canvas>
+														</div>
+													</div>
+													<div class="tab-pane fade" id="server-loading2" role="tabpanel" aria-labelledby="server-loading-tab">
+														<div class="d-flex justify-content-between">
+															<p class="mb-4">+5.2% 7 days</p>
+															<div id="serveLoading-legend" class="revenuechart-legend">f</div>
+														</div>
+														<canvas id="bubble-nro-productos-empresas"></canvas>
+													</div>
+													
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>						
+					</div>				
+					
 				</div>
 				<!-- content-wrapper ends -->
 				<!-- partial:partials/_footer.html -->
@@ -400,12 +440,15 @@
     <!-- plugin js for this page -->
     <!-- End plugin js for this page -->
 	<!-- <script src="vendors/chart.js/Chart.min.js"></script>-->
+	<script src="./js/utils.js"></script>
+	<script src="./us_stats_by_state_min.js"></script>
 	<script src="./vendors/justgage/raphael-2.1.4.min.js"></script>
 	<script src="./vendors/justgage/justgage.js"></script>	
 	<script src="./char-js/script-chart-config.js"></script>
 	<script src="./char-js/script-chart-bar.js"></script>
 	<script src="./char-js/script-chart-line.js"></script>
 	<script src="./char-js/script-chart-buble.js"></script>
+	<script src="./char-js/script-chart-tree-map.js"></script>
 	
     <script src="vendors/progressbar.js/progressbar.min.js"></script>
 		
