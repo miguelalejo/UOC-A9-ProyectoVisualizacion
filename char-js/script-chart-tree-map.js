@@ -14,7 +14,7 @@ crearCharTreeCompradores();
 						datasets: [{
 							tree: data_tree,
 							key: 'montos',
-							groups: ['region', 'division', 'code'],
+							groups: ['division','region' ,'state','code'],
 							spacing: -0.5,
 							borderWidth: 0.5,
 							borderColor: 'rgba(200,200,200,1)',
@@ -71,17 +71,16 @@ crearCharTreeCompradores();
 							legend: {
 								display: false
 							},
-							tooltips: {
+							tooltip: {
 								callbacks: {
-									title(item, data) {
-										return data.datasets[item[0].datasetIndex].key;
-									},
-									label(item, data) {
-										const dataset = data.datasets[item.datasetIndex];
-										const dataItem = dataset.data[item.index];
+									label(item) {
+										const dataset = item.dataset;
+										const dataItem = dataset.data[item.dataIndex];
 										const obj = dataItem._data;
-										const label = obj.state || obj.division || obj.region ;
-										return label + ' - ' +  dataItem.v;
+										if(obj.state == dataItem.g ){
+											return obj.state
+										}
+										return dataItem.g + ': ' + dataItem.v;
 									}
 								}
 							}
@@ -102,6 +101,9 @@ crearCharTreeCompradores();
 						if (cb.value === 'rtl') {
 							rtl = true;
 						} else {
+							if(cb.value=="code"){
+								groups.push('state');	
+							}
 							groups.push(cb.value);
 						}
 					});
@@ -122,7 +124,7 @@ crearCharTreeCompradores();
 		'https://raw.githubusercontent.com/miguelalejo/UOC-A9-ProyectoVisualizacion/main/data/tree-proveedor.json');
 					console.log(response);
 					const data_tree = await response.json();
-				   
+					const data = data_tree;
 		  
 					Utils.load(() => {
 						const ctx = document.getElementById('chart-area-pro').getContext('2d');
@@ -132,7 +134,7 @@ crearCharTreeCompradores();
 								datasets: [{
 									tree: data_tree,
 									key: 'montos',
-									groups: ['region', 'division', 'code'],
+									groups: [ 'division','region', 'state','code'],
 									spacing: -0.5,
 									borderWidth: 0.5,
 									borderColor: 'rgba(200,200,200,1)',
@@ -189,17 +191,17 @@ crearCharTreeCompradores();
 									legend: {
 										display: false
 									},
-									tooltips: {
+									tooltip: {
 										callbacks: {
-											title(item, data) {
-												return data.datasets[item[0].datasetIndex].key;
-											},
-											label(item, data) {
-												const dataset = data.datasets[item.datasetIndex];
-												const dataItem = dataset.data[item.index];
+											
+											label(item) {
+												const dataset = item.dataset;
+												const dataItem = dataset.data[item.dataIndex];
 												const obj = dataItem._data;
-												const label = obj.state || obj.division || obj.region ;
-												return label + ' - ' +  dataItem.v;
+												if(obj.state == dataItem.g ){
+													return obj.state
+												}
+												return dataItem.g + ': ' + dataItem.v;
 											}
 										}
 									}
@@ -220,6 +222,9 @@ crearCharTreeCompradores();
 								if (cb.value === 'rtl') {
 									rtl = true;
 								} else {
+									if(cb.value=="code"){
+										groups.push('state');	
+									}
 									groups.push(cb.value);
 								}
 							});
