@@ -32,6 +32,15 @@
       padding-top: 1rem;
     }
   }
+  .card-body-mod {
+    padding: $card-padding-y $card-padding-x;
+    @media (max-width: 991px) {
+      padding: 1.5rem;
+    }
+    + .card-body {
+      padding-top: 1rem;
+    }
+  }
   .card-title {
     color: $card-title-color;
     margin-bottom: 1.5rem;

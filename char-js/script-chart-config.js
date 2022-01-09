@@ -9,7 +9,24 @@
                   return "rgb(" + r + ", " + g + ", " + b + ")";
               }
           }
+function obtenerPaleta(item) {          
+         
+            switch (item) {
+                case 'COMPAÑÍA LIMITADA': return paletaColorProvedorLinea[0];
+                case 'PERSONA NATURAL': return paletaColorProvedorLinea[1];
+                case 'SOCIEDAD ANÓNIMA': return paletaColorProvedorLinea[2];                
+                
+                case 'REACTIVOS COVID': return paletaColorProducto[0];
+                case 'MASCARILLA KN95': return paletaColorProducto[1];
+                case 'BOLSAS CADAVER': return paletaColorProducto[2];
+                case 'SERVICIO LABORATORIO': return paletaColorProducto[3];
+                case 'PRUEBAS RAPIDAS': return paletaColorProducto[4];
+                case 'PRUEBAS PCR': return paletaColorProducto[5];
 
+                default: return '#e6beff';
+            }
+               
+        }
 paletaColorLinea = palette('cb-Set2', 5).map(function(hex) {
               return hexToRGB('#' +hex,0.5); });
 

@@ -35,7 +35,7 @@ async function crearBarraProductoMeses() {
             obj['label'] = key;
             obj['data'] = value;
             obj['borderColor'] = paletaColor[indice];
-            obj['backgroundColor'] = paletaColor[indice];
+            obj['backgroundColor'] = obtenerPaleta(key);
             myData.push(obj)            
           });
           

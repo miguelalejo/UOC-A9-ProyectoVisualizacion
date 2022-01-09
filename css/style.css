@@ -116,6 +116,9 @@
 /* === Import template variables === */
 /*-------------------------------------------------------------------*/
 /* === SCSS Compass Functions === */
+.text-justify {
+  text-align: justify;
+}
 @-moz-keyframes flash {
   0% {
     opacity: 1;
@@ -21480,6 +21483,10 @@ code {
 
 .card .card-body {
   padding: 1.875rem 1.875rem;
+}
+
+.card .card-body-mod {
+  padding: 0.875rem 0.875rem;
 }
 
 @media (max-width: 991px) {

@@ -1,46 +1,6 @@
 (function($) {
 	'use strict';
-	$(function() {
-		var productorderGage = new JustGage({
-			id: 'productorder-gage',
-			value: 2100,
-			min: 0,
-			max: 5000,
-			hideMinMax: false,
-			symbol: 'K',
-			label: 'You have done 57.6% more ordes today',
-			valueFontColor: "#001737",
-			labelFontColor: "#001737",
-			gaugeWidthScale: 0.3,
-			counter: true,
-			relativeGaugeSize: true,
-			gaugeColor: "#fa424a",
-			levelColors: [ "#fcd53b" ]
-		});
-		$("#productorder-gage").append('<div class="product-order"></div>');
-		var salesDifferencedata = {
-			labels: ["50+", "35-50", "25-35", "18-25", "0-18"],
-			datasets: [{
-				label: 'Best Sellers',
-				data: [22, 28, 18, 20, 12],
-				backgroundColor: [
-						'#8169f2',
-						'#6a4df5',
-						'#4f2def',
-						'#2b0bc5',
-						'#180183',
-				],
-				borderColor: [
-						'#8169f2',
-						'#6a4df5',
-						'#4f2def',
-						'#2b0bc5',
-						'#180183',
-				],
-				borderWidth: 2,
-				fill: false
-			}],
-		};
+	$(function() {		
 		var productorderGageReact = new JustGage({
 			id: 'productorder-gage-reac',
 			value: 4,
