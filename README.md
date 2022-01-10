@@ -1,6 +1,10 @@
 # CIFRAS DE LAS CONTRATACIONES PÚBLICAS POR EMERGENCIA EN ECUADOR
 
 
+URL Visualización:
+
+https://bvnyn.csb.app/
+
 URL Proyecto GIT:
 
 https://github.com/miguelalejo/UOC-A9-ProyectoVisualizacion
@@ -8,10 +12,6 @@ https://github.com/miguelalejo/UOC-A9-ProyectoVisualizacion
 URL Proyecto Preprocesamiento:
 
 https://colab.research.google.com/drive/1yzDQML5AEvR-eMD4roI-4zYXwd9WhfWU?usp=sharing
-
-URL Visualización:
-
-https://bvnyn.csb.app/
 
 URL contenedor web público:
 
@@ -115,7 +115,8 @@ La solución se encuentra implementada en R, y los archivos de código fuente se
 * **char-js** Contrucción de los objetos para las visualizaciones en JS.
 * **data** Archivos en formato JSON con las fuentes de datos tratados y agregados.
 * **css** Hojas de estilo de la visualización.
-* * **index.html** Página principal de la visualización.
+* **index.html** Página principal de la visualización.
+* **notebooks** Note books de la solución.
 
 ## Recursos
 
