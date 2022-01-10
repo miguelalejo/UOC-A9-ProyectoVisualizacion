@@ -5,11 +5,24 @@ URL Proyecto GIT:
 
 https://github.com/miguelalejo/UOC-A9-ProyectoVisualizacion
 
+URL Proyecto Preprocesamiento:
+
+https://colab.research.google.com/drive/1yzDQML5AEvR-eMD4roI-4zYXwd9WhfWU?usp=sharing
+
+URL Visualización:
+
+https://bvnyn.csb.app/
+
+URL contenedor web público:
+
+https://codesandbox.io/s/uoc-visualizacion-casos-corrupcion-bvnyn
+
+
 ## Créditos
 
 La actividad ha sido realizada de manera individual por **Miguel Alejandro Ponce**.
 
-# Justificación
+## Justificación
 En el Ecuador existen una serie de políticas, leyes y normas enfocados en la lucha contra la corrupción respecto de las compras realizadas entre instituciones públicas y empresas privadas o personas naturales; según lo establecido en la Ley Orgánica del Sistema Nacional de Contratación Pública (LOSNCP), el Servicio Nacional de Contratación Pública (Sercop), es la entidad rectora del Sistema Nacional de Contratación Pública, responsable de desarrollar y administrar el Sistema Oficial de Contratación Pública del Ecuador y de establecer las políticas y condiciones de la contratación pública a nivel nacional. Durante la última década, el gobierno de Ecuador ha estado rodeado de corrupción, fraude empresarial y desempleo. Realmente creo que luchar contra la corrupción puede ayudar a mi país a alcanzar la igualdad entre los ciudadanos ecuatorianos. Este deseo de resolver la desigualdad me animó a seleccionar el presente conjunto de datos, que una vez realizado el análisis de las fuentes se pueden identificar las siguientes limitaciones que enfrentan los Científicos de Datos y el público en general al intentar tratar estas fuentes:
 * Los datos que se encuentran en los portales públicos tiene diferentes formatos, los repositorios están desactualizados, sus accesos vía web no están disponibles o no existen.
 * No existen visualizaciones que cuenten historias entre las relaciones entre las personas de las empresas, marcas atípicas respecto de los contratos de orden público.
@@ -18,7 +31,7 @@ En el Ecuador existen una serie de políticas, leyes y normas enfocados en la lu
 * Existen errores u omisiones en los propios documentos generados como reportes de las instituciones que deben reportar esta información. Luego al no estar los datos en línea se produce un efecto de congelamiento de datos cuya extracción posterior imposibilita mecanismos efectivos para combatir la corrupción.
 
 
-# Visualización
+## Visualización
 Debido a que no existe una herramienta de visualización accesible para todo público que integre la información de los datos que permita combatir la corrupción y que permita la interacción y retro alimentación de la comunidad. Se propone realizar una visualización relacionada con el ámbito de contratación pública a nivel nacional durante los meses de pandemia para ciertos insumos en medicina (MASCARILLAS, BOLSAS CADÁVERES, ALCOHOL, PRUEBAS PCR).
 Las cuestiones a responder con la visualización son:
 * ¿Cuáles son los 10 proveedores del estado para los primeros meses de pandemia tienen un sobre precio en sus productos?
@@ -26,12 +39,12 @@ Las cuestiones a responder con la visualización son:
 * ¿Cuáles fueron los tiempos promedios más irregulares para asignación de estos contratos en un periodo de día?
 * ¿Cuáles son el top 10 de instituciones públicas las que realizaros mayores gastos en contratos con estos insumos?
 
-# Justificación de la elección del juego de datos
+## Justificación de la elección del juego de datos
 Los datos son actuales debido a que la ley obliga a realizar la publicación de todos los contrataros realizados de manera mensual en un formato Open Contracting (reporte en formato json), estándar internacional para el reportar información contractual relevante. La última fecha de actualización del conjunto de datos es 29 de diciembre de 2021.
 
 El dominio se describe por medio de los siguientes atributos:
 
- ###   Column                           Non-Null Count  Dtype                                 
+    Column                           Non-Null Count  Dtype                                 
 ---  ------                           --------------  -----                                 
  0   ocid                             35 non-null     object                                
  1   rationale                        35 non-null     object                                
@@ -80,7 +93,7 @@ El dominio se describe por medio de los siguientes atributos:
 URL de datos abiertos(Licensed under the MIT):
 https://datosabiertos.compraspublicas.gob.ec/PLATAFORMA
 
-### Dataset:
+## Dataset:
 Las listas de los archivos cvs con los datos se encuentran en la capeta *raw-data*. En este caso se presentan dos conjuntos de datos. 
 El primero corresponde a los datos originales. 
 * contratos_proveedor_unidad.xlsx
