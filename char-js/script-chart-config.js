@@ -18,9 +18,9 @@ function obtenerPaleta(item) {
                 
                 case 'REACTIVOS COVID': return paletaColorProducto[0];
                 case 'MASCARILLA KN95': return paletaColorProducto[1];
-                case 'BOLSAS CADAVER': return paletaColorProducto[2];
+                case 'BOLSAS CADÁVER': return paletaColorProducto[2];
                 case 'SERVICIO LABORATORIO': return paletaColorProducto[3];
-                case 'PRUEBAS RAPIDAS': return paletaColorProducto[4];
+                case 'PRUEBAS RÁPIDAS': return paletaColorProducto[4];
                 case 'PRUEBAS PCR': return paletaColorProducto[5];
 
                 default: return '#e6beff';
