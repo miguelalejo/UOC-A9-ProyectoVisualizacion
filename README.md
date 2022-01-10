@@ -18,21 +18,20 @@ En el Ecuador existen una serie de políticas, leyes y normas enfocados en la lu
 * Existen errores u omisiones en los propios documentos generados como reportes de las instituciones que deben reportar esta información. Luego al no estar los datos en línea se produce un efecto de congelamiento de datos cuya extracción posterior imposibilita mecanismos efectivos para combatir la corrupción.
 
 
-# VISUALIZACIÓN
+# Visualización
 Debido a que no existe una herramienta de visualización accesible para todo público que integre la información de los datos que permita combatir la corrupción y que permita la interacción y retro alimentación de la comunidad. Se propone realizar una visualización relacionada con el ámbito de contratación pública a nivel nacional durante los meses de pandemia para ciertos insumos en medicina (MASCARILLAS, BOLSAS CADÁVERES, ALCOHOL, PRUEBAS PCR).
 Las cuestiones a responder con la visualización son:
 * ¿Cuáles son los 10 proveedores del estado para los primeros meses de pandemia tienen un sobre precio en sus productos?
 * ¿Cuáles son los porcentajes de los productos más vendidos durante los meses de pandemia que corresponden al tipo catalogado como “EMERGENCIA SANITARIA” (conocido como una de las fuentes comunes de corrupción)?
 * ¿Cuáles fueron los tiempos promedios más irregulares para asignación de estos contratos en un periodo de día?
-* ¿Cuántas unidades de los productos fueron vendidas por cada producto?
-* ¿Cuáles son el top 10 de instituciones
+* ¿Cuáles son el top 10 de instituciones públicas las que realizaros mayores gastos en contratos con estos insumos?
 
 # Justificación de la elección del juego de datos
 Los datos son actuales debido a que la ley obliga a realizar la publicación de todos los contrataros realizados de manera mensual en un formato Open Contracting (reporte en formato json), estándar internacional para el reportar información contractual relevante. La última fecha de actualización del conjunto de datos es 29 de diciembre de 2021.
 
 El dominio se describe por medio de los siguientes atributos:
 
- #   Column                           Non-Null Count  Dtype                                 
+ ###   Column                           Non-Null Count  Dtype                                 
 ---  ------                           --------------  -----                                 
  0   ocid                             35 non-null     object                                
  1   rationale                        35 non-null     object                                
